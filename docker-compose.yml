@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  ganache:
+    image: trufflesuite/ganache:latest
+    ports:
+      - "8545:8545"
+    command: ["--wallet.deterministic"] # 平台超级账号，负责帮老师代付上链费
+  ipfs:
+    image: ipfs/kubo:latest
+    ports:
+      - "5001:5001" 
+      - "8081:8080"
